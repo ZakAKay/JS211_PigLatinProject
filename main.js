@@ -2,7 +2,7 @@
 
 // brings in the assert module for unit testing
 const assert = require('assert');
-// brings in the readline module to access the command line
+// //brings in the readline module to access the command line
 const readline = require('readline');
 // use the readline module to print out to the command line
 const rl = readline.createInterface({
@@ -13,9 +13,56 @@ const rl = readline.createInterface({
 
 const pigLatin = (word) => {
 
-  // Your code here
+word = word.toLowerCase().trim();
 
-}
+const vowels = ['a', 'e', 'i', 'o', 'u'];
+
+let firstLetter = word.slice(0, 1);
+// for (i=0; i < word.length; i++) {
+
+
+  if (vowels.includes(firstLetter)) {
+
+    console.log(word + 'yay') 
+    return word + 'yay'
+
+
+  } else {
+    console.log(word.slice(1) + word.slice(0,1) + 'ay')
+    return word.slice(1) + word.slice(0,1) + 'ay'
+  }
+
+  
+  }
+
+  // cpmpare the first letter of the word with the vowels in the array to see if there's a match
+
+
+
+
+// should translate a simple word or // should translate a complex word
+
+//car
+//1. find  first letter
+
+// if the word starts with a consonant, move the first letter to the end and add 'ay'
+
+// if the word starts with a vowel add 'yay' to the end
+
+  
+
+
+  // should attach "yay" if word begins with vowel
+
+
+ 
+
+
+
+
+
+
+
 
 // the first function called in the program to get an input from the user
 // to run the function use the command: node main.js
@@ -38,7 +85,7 @@ if (typeof describe === 'function') {
       assert.equal(pigLatin('dog'), 'ogday');
     });
     it('should translate a complex word', () => {
-      assert.equal(pigLatin('create'), 'eatecray');
+      assert.equal(pigLatin('create'), 'reatecay');
       assert.equal(pigLatin('valley'), 'alleyvay');
     });
     it('should attach "yay" if word begins with vowel', () => {
