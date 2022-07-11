@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(59, 35, 0);
+    text-align: center;
+    color: aqua;
+  }
+  h1 {
+    font-size: 60px;
+    margin-bottom: 3%;
+  }
+  button {
+    color: aqua;
+    background-color: black;
+    font-size: 20px;
+  }
